@@ -22,6 +22,9 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
+      - name: Install ImageMagick for 3D Icon
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq imagemagick
+
       - name: Compile Universal High-Speed Android APK
         run: |
           git clone --depth 1 https://github.com/xchacha20-poly1305/webview-apk-template.git android-shell
